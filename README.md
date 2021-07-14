@@ -25,6 +25,12 @@
 
   [GitHub Repository](https://github.com/cikennedy/workout-tracker)
 
+  ![Stats - Workout Duration](./assets/graph1.png)
+
+  ![Stats - Weight](./assets/graph2.png)
+
+  ![Successful Test Posts - API Route](./assets/success-api.png)
+
   ## License
 
   This project is licensed using the MIT license.
