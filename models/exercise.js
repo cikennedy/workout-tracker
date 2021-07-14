@@ -12,20 +12,20 @@ const exerciseSchema = new Schema({
   },
   exercises: [
     {
+      type: {
+        type: String,
+        trim: true
+      },
       name: {
         type: String,
         trim: true,
         required: ""
       },
-      type: {
-        type: String,
-        trim: true
-      },
-      weight: {
+      duration: {
         type: Number,
         default: 0
       },
-      sets: {
+      weight: {
         type: Number,
         default: 0
       },
@@ -33,7 +33,7 @@ const exerciseSchema = new Schema({
         type: Number,
         default: 0
       },
-      duration: {
+      sets: {
         type: Number,
         default: 0
       },
