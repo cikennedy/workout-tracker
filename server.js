@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(routes);
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout-tracker");
 
 // Start the API server
 app.listen(PORT, function() {
