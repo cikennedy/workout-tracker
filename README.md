@@ -3,39 +3,27 @@
 
   ## Description
 
-  Application that allows a user to create and track daily workouts. 
+  This is an application that allows users to create and track daily workouts. Users are able to log multiple exercises in a workout on a given day as well as track the exercises using various parameters. Tracking workouts can help users reach their fitness goals faster. 
 
   ## Table of Contents
 
-  * [Installation](#installation)
-
   * [Usage](#usage)
-
-  * [Credits](#credits)
   
   * [License](#license)
 
   * [Badges](#badges)
 
-  * [Features](#features)
-
-  * [Contribution](#contribution)
-
-  * [Tests](#tests)
-
   * [Questions](#questions)
-
-  ## Installation
-
-  For this project to run properly, install the necessary dependencies by using the following terminal command: npm i
 
   ## Usage
 
-  N/A
+  The application can be used via the browser at the below deployed link: 
 
-  ## Credits
+  [Heroku Deployment](https://invulnerable-livre-87698.herokuapp.com/)
 
-  N/A
+  The application's GitHub repository can be found below:
+
+  [GitHub Repository](https://github.com/cikennedy/workout-tracker)
 
   ## License
 
@@ -44,18 +32,6 @@
   ## Badges
 
   ![GitHub License](https://img.shields.io/badge/license-MIT-yellow.svg)
-
-  ## Features
-
-  N/A
-
-  ## Contribution
-
-  N/A
-
-  ## Tests
-
-  N/A
 
   ## Questions
 
