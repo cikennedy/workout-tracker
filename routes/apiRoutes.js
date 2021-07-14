@@ -12,8 +12,9 @@ const db = require("../models");
 //     });
 // });
 
+// view all workouts 
 router.get('/workouts', (req, res) => {
-    db.Excercise.find({})
+    db.Workout.find({})
     .then(dbData => {
         dbData.forEach(workout => {
             var total = 0;
@@ -22,26 +23,51 @@ router.get('/workouts', (req, res) => {
                 total += e.duration;
             });
             workout.totalDuration = total;
-        })
-    })
-    .then(dbData => res.json(dbData))
-    .catch(err => {
+        });
+        res.json(dbData);
+    }).catch(err => {
         console.log(err);
         res.status(500).json(err);
     });
 });
 
-router.post('/workouts', (req, res) => {
-    Exercise.create({})
-    .then(dbData => res.json(dbData))
-    .catch(err => {
+// create a workout 
+router.post('/workouts', ({ body }, res) => {
+    db.Workout.create(body).then(dbData => {
+        res.json(dbData);
+    }).catch(err => {
         console.log(err);
         res.status(500).json(err);
     });
 });
 
+// add an exercise 
+router.put('/workouts/:id', (req, res) => {
+    db.Workout.findOneAndUpdate(
+        { _id: req.params.id },
+        {
+            // The $inc operator increments a field by a specified value
+            $inc: { totalDuration: req.body.duration },
+            // The $push operator appends a specified value to an array.
+            $push: { exercises: req.body }
+        },
+        { new: true })
+        .then(dbData => {
+            res.json(dbData);
+        }).catch(err => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
 
-// 
+router.get('/workouts/range', (req, res) => {
+    db.Workout.find({}).then(dbData => {
+        res.json(dbData);
+    }).catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    });
+});
 
 module.exports = router;
 
